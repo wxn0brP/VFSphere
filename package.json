@@ -15,7 +15,8 @@
     "scripts": {
         "build": "tsc && tsc-alias",
         "start": "node dist/index.js",
-        "bun": "bun run src/index.ts"
+        "bun": "bun run src/index.ts",
+        "cli": "bun run src/cli.ts"
     },
     "devDependencies": {
         "@types/node": "^24.3.0",
