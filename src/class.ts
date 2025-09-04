@@ -43,8 +43,9 @@ export class VFS {
     }
 
     async delete(collection: string) {
-        await this.mgr.removeCollection("%" + collection);
-        return await this.mgr.removeCollection("$" + collection);
+        if (!collection.startsWith("/")) collection = "/" + collection;
+        await this.mgr.removeCollection(collection);
+        return await this.db.removeOne("%list", { path: collection });
     }
 
     async list() {

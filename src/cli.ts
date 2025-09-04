@@ -21,4 +21,9 @@ else if (args[0] === "extract") {
 else if (args[0] === "list")
     console.log(await vfs.list());
 else
-    console.log("Invalid command");
+    console.log(`
+Usage:
+    add <file> [mount]
+    extract <mount> [out file]
+    list
+`);
