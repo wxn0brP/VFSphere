@@ -36,5 +36,9 @@
             "import": "./dist/*.js",
             "default": "./dist/*.js"
         }
+    },
+    "dependencies": {
+        "@wxn0brp/db-core": "^0.1.6",
+        "@wxn0brp/db-storage-bin": "^0.0.3"
     }
 }
