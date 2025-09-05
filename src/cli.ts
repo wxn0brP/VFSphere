@@ -18,6 +18,15 @@ else if (args[0] === "extract") {
     const data = await vfs.read(mount);
     await writeFile(file, data);
 }
+else if (args[0] === "delete") {
+    if (!args[1]) throw new Error("Usage: delete <mount>");
+    await vfs.delete(args[1]);
+}
+else if (args[0] === "read") {
+    if (!args[1]) throw new Error("Usage: read <mount>");
+    const data = await vfs.read(args[1]);
+    process.stdout.write(data);
+}
 else if (args[0] === "list")
     console.log(await vfs.list());
 else
@@ -25,5 +34,7 @@ else
 Usage:
     add <file> [mount]
     extract <mount> [out file]
+    delete <mount>
+    read <mount>
     list
 `);
