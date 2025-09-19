@@ -19,7 +19,7 @@
         "cli": "bun run src/cli.ts"
     },
     "dependencies": {
-        "@wxn0brp/db-core": "^0.1.6",
+        "@wxn0brp/db-core": "^0.2.0",
         "@wxn0brp/db-storage-bin": "^0.0.5"
     },
     "devDependencies": {
