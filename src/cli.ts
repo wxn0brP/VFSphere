@@ -2,7 +2,19 @@ import { readFile, writeFile } from "fs/promises";
 import { VFS } from "./class";
 
 const args = process.argv.slice(2);
-const vfs = await new VFS().init();
+
+let filename = "data.vfsp";
+if (args[0] === "-f" || args[0] === "--file") {
+    args.shift();
+    filename = args.shift();
+}
+if (args[0] && args[0].endsWith(".vfsp")) {
+    filename = args.shift();
+}
+
+const vfs = await new VFS({
+    file: filename
+}).init();
 
 const a0 = args[0];
 if (a0 === "add" || a0 === "a") {
@@ -28,11 +40,12 @@ else if (a0 === "read" || a0 === "cat" || a0 === "r") {
     const data = await vfs.read(args[1]);
     process.stdout.write(data);
 }
-else if (a0 === "list")
+else if (a0 === "list" || a0 === "ls")
     console.log(await vfs.list());
 else
     console.log(`
 Usage:
+    -f, --file <file>
     add <file> [mount]
     extract <mount> [out file]
     delete <mount>
