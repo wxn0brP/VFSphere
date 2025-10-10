@@ -1,6 +1,6 @@
 {
     "name": "@wxn0brp/vfsphere",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "description": "",
@@ -16,12 +16,14 @@
         "build": "tsc && tsc-alias",
         "cli": "bun run src/cli.ts"
     },
-    "dependencies": {
-        "@wxn0brp/db-core": "^0.2.3",
-        "@wxn0brp/db-storage-bin": "^0.0.6"
+    "peerDependencies": {
+        "@wxn0brp/db-core": ">=0.2.3",
+        "@wxn0brp/db-storage-bin": ">=0.0.7"
     },
     "devDependencies": {
         "@types/node": "*",
+        "@wxn0brp/db-core": "^0.2.3",
+        "@wxn0brp/db-storage-bin": "^0.0.7",
         "tsc-alias": "*",
         "typescript": "*"
     },
