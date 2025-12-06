@@ -22,7 +22,7 @@
     },
     "devDependencies": {
         "@types/node": "*",
-        "@wxn0brp/db-core": "^0.2.3",
+        "@wxn0brp/db-core": "^0.3.0",
         "@wxn0brp/db-storage-bin": "^0.0.7",
         "tsc-alias": "*",
         "typescript": "*"
