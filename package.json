@@ -17,13 +17,13 @@
         "cli": "bun run src/cli.ts"
     },
     "peerDependencies": {
-        "@wxn0brp/db-core": ">=0.2.3",
-        "@wxn0brp/db-storage-bin": ">=0.0.7"
+        "@wxn0brp/db-core": ">=0.3.1",
+        "@wxn0brp/db-storage-bin": ">=0.0.9"
     },
     "devDependencies": {
         "@types/node": "*",
-        "@wxn0brp/db-core": "^0.2.3",
-        "@wxn0brp/db-storage-bin": "^0.0.7",
+        "@wxn0brp/db-core": "^0.3.1",
+        "@wxn0brp/db-storage-bin": "^0.0.9",
         "tsc-alias": "*",
         "typescript": "*"
     },
