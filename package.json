@@ -1,0 +1,41 @@
+{
+  "name": "@wxn0brp/vfsphere",
+  "version": "0.0.2",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wxn0brP/VFSphere.git"
+  },
+  "homepage": "https://github.com/wxn0brP/VFSphere",
+  "author": "wxn0brP",
+  "license": "MIT",
+  "type": "module",
+  "peerDependencies": {
+    "@wxn0brp/db-core": ">=0.3.1",
+    "@wxn0brp/db-storage-bin": ">=0.0.9"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "@wxn0brp/db-core": "^0.3.1",
+    "@wxn0brp/db-storage-bin": "^0.0.9",
+    "tsc-alias": "*",
+    "typescript": "*"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "import": "./dist/*.js",
+      "default": "./dist/*.js"
+    }
+  }
+}
